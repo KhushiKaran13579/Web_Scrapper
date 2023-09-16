@@ -9,45 +9,37 @@ Before running the application, make sure you have the following prerequisites i
 - Requests
 - BeautifulSoup
 You can install the required Python packages using `pip`:
-```bash
+``bash
 pip install flask requests beautifulsoup4
 
+# Usage
+## Clone this repository to your local machine:
+ git clone https://github.com/Sarvesh223/web_scrapper.git
 
-
-Clone this repository to your local machine:
-git clone https://github.com/Sarvesh223/web_scrapper.git
-
-Navigate to the project directory:
-cd your-repo
-Run the Flask application:
-python app.py
+## Navigate to the project directory:
+ cd your-repo
+## Run the Flask application:
+ python app.py
 
 Open your web browser and go to http://localhost:5000/ to access the application.
-How it Works
-The application provides a web interface where you can enter a URL.
+# How it Works
+-The application provides a web interface where you can enter a URL.
+-After entering the URL and submitting the form, the application does the following:
+-It sends an HTTP GET request to the provided URL using the requests library.
+-If the request is successful (status code 200), it parses the HTML content of the page using BeautifulSoup.
+-It extracts the page title, paragraphs (<p> tags), and links (<a> tags) from the HTML content.
+-The downloaded HTML content is saved to a file in the downloads folder.
+-The user is provided with a download link to fetch the saved HTML file.
+-If there is an error in the process (e.g., failed request or parsing error), an error message is displayed.
 
-After entering the URL and submitting the form, the application does the following:
-
-It sends an HTTP GET request to the provided URL using the requests library.
-
-If the request is successful (status code 200), it parses the HTML content of the page using BeautifulSoup.
-
-It extracts the page title, paragraphs (<p> tags), and links (<a> tags) from the HTML content.
-
-The downloaded HTML content is saved to a file in the downloads folder.
-
-The user is provided with a download link to fetch the saved HTML file.
-
-If there is an error in the process (e.g., failed request or parsing error), an error message is displayed.
-
-Project Structure
+# Project Structure
 app.py: The main Flask application.
 templates/index.html: HTML template for the web interface.
 
-License
+# License
 This project is licensed under the MIT License. Feel free to use and modify it for your own purposes.
 
-Acknowledgments
+# Acknowledgments
 This project was inspired by the need to easily fetch  HTML content from a URL.
 Special thanks to the Flask, Requests, and BeautifulSoup communities for their excellent libraries.
 vbnet
