@@ -2,15 +2,27 @@
 
 This Flask application allows you to enter a URL, fetch its HTML content, parse it using BeautifulSoup, and then download the HTML content as a file. Additionally, it extracts specific information from the HTML, such as the page title, paragraphs, and links.
 ## Images
+<table>
+  <tr>
+    <td>First Screen Page</td>
+     <td>Holiday Mention</td>
+     <td>Present day in purple and selected day in pink</td>
+  </tr>
+  <tr>
+
+    <td><img src="![Screenshot (22)](https://github.com/Sarvesh223/web_scrapper/assets/92908500/e87f2a85-51c9-43c5-b433-91965f5030f5)" width=270 height=480></td>
+    <td><img src="screenshots/Screenshot_1582745125.png" width=270 height=480></td>
+    <td><img src="screenshots/Screenshot_1582745139.png" width=270 height=480></td>
+  </tr>
+ </table>
 
 ## Prerequisites
-![Screenshot (22)](https://github.com/Sarvesh223/web_scrapper/assets/92908500/4e157b18-d069-40d2-80bd-95e28b8b15d4)
-
 Before running the application, make sure you have the following prerequisites installed:
 - Python 3.x
 - Flask
 - Requests
 - BeautifulSoup
+
 You can install the required Python packages using `pip`:
 ``bash
 pip install flask requests beautifulsoup4
