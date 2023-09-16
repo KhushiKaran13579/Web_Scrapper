@@ -1,9 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-from flask import Flask, request, redirect, render_template,send_file
-import os
+from flask import Flask, request, redirect, render_template
 app = Flask(__name__)
-app.static_folder = 'static'
 @app.route('/', methods=['GET', 'POST'])
 def index():
     link_url = ""  # Declare link_url here
@@ -44,8 +42,6 @@ if __name__ == '__main__':
     app.run(debug=True)
     
 
-if __name__ == '__main__':
-    app.run(debug=True)
 
 
 
