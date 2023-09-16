@@ -33,15 +33,15 @@ Open your web browser and go to http://localhost:5000/ to access the application
 -If there is an error in the process (e.g., failed request or parsing error), an error message is displayed.
 
 # Project Structure
-app.py: The main Flask application.
-templates/index.html: HTML template for the web interface.
+-app.py: The main Flask application.
+-templates/index.html: HTML template for the web interface.
 
 # License
 This project is licensed under the MIT License. Feel free to use and modify it for your own purposes.
 
 # Acknowledgments
-This project was inspired by the need to easily fetch  HTML content from a URL.
-Special thanks to the Flask, Requests, and BeautifulSoup communities for their excellent libraries.
+-This project was inspired by the need to easily fetch  HTML content from a URL.
+-Special thanks to the Flask, Requests, and BeautifulSoup communities for their excellent libraries.
 vbnet
 
 
