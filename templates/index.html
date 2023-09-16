@@ -73,7 +73,7 @@ form input {
 input[type=submit] {
 	padding:15px 50px;
 	width:auto;
-	background:#E0A96D;
+	background:#be8c5a;
 	border:none;
 	color:white;
 	cursor:pointer;
@@ -103,9 +103,13 @@ input[type="submit"]:active {
     <form action="/" method="POST">
         <label for="link_url">Enter Site URL:</label>
         <input type="text" id="link_url" name="link_url" required>
+		<br>
+		<label for="id_url">Enter Nav id:</label>
+		<input type="text" id="id_url" name="id_url" required>
         <br><br>
         <input type="submit" value="Scrape The Data">
     </form>
+	
 
     <!-- Display scraped data here -->
     <h2>Title: {{ title }}</h2>
