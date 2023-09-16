@@ -21,7 +21,7 @@ title = soup.title
 paras = soup.find_all('p')
 #print(paras)
 #to find a particular class in a para
-print(soup.find('p')['class'])
+print(soup.find('p')['class']
 #find elements with class lead 
 #note we can add any atrribute of the class provided it should me within the class
 print(soup.find_all("p",class_="lead"))
