@@ -1,46 +1,51 @@
 import requests
 from bs4 import BeautifulSoup
-url = "https://codewithharry.com"
+from flask import Flask, request, redirect, render_template,send_file
+import os
+app = Flask(__name__)
+app.static_folder = 'static'
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    link_url = ""  # Declare link_url here
 
-#get the HTML
-r = requests.get(url)
-htmlContent = r.content
-#print(htmlContent)
-#step2 :parse HTML content
-soup =BeautifulSoup(htmlContent,'html.parser')
-#print(soup.prettify)
-#step3:HTML tree traversal
-title = soup.title
-#print(type(title))
-#step4 how to write comments
-#markup ="<p><!--this is a comment i want to add--></p>"
-#soup2 = BeautifulSoup(markup)
-#print(type(soup2.p.string))
-#exit()
-#to finnd all the paragraphs
-paras = soup.find_all('p')
-#print(paras)
-#to find a particular class in a para
-print(soup.find('p')['class']
-#find elements with class lead 
-#note we can add any atrribute of the class provided it should me within the class
-print(soup.find_all("p",class_="lead"))
-#get text from elements
-print(soup.find('p').get_text())
-#get all the anchor tags
-anchor =soup.find_all('a')
-#get all the links from the page
-all_links = set()9
-for link in anchor:
-    if (link.get('href') !='#'):
-      link_text ="https://codewithharry.com"+link.get('href')
-      all_links.add(link)
-      print(link_text)
+    if request.method == 'POST':
+        link_url = request.form['link_url']
+#----------------------------------------------------------------------------------------------------------------------------#
+        #KhushiKaran13579 code start
 
-#print(anchor)
+        try:
+            response = requests.get(link_url)
+            if response.status_code == 200:
+                htmlContent = response.text
+                soup = BeautifulSoup(htmlContent, 'html.parser')
+                title = soup.title
+                paras = soup.find_all('p')
+                all_links = set()
+                for link in soup.find_all('a'):
+                    if link.get('href') != '#':
+                        link_text = link.get('href')
+                        all_links.add(link_text)
 
-navbarSupportedContent = soup.find(id='nav-content')
-print(navbarSupportedContent.contents)
-elem = soup.select('.modal-footer')
-print(elem)
+                navbar_content = soup.find(id='nav-content')
+                elem = soup.select('.modal-footer')
+                
+                #KhushiKaran13579 code ended
+#---------------------------------------------------------------------------------------------------------------------
+                
+                return render_template('index.html', title=title, paras=paras, all_links=all_links, navbar_content=navbar_content, elem=elem)
+            else:
+                return f"Failed to fetch the URL. Status code: {response.status_code}"
+        except Exception as e:
+            return f"An error occurred: {str(e)}"
+
+    return render_template('index.html', link_url=link_url)  # Pass link_url to the template
+
+if __name__ == '__main__':
+    app.run(debug=True)
+    
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
 
