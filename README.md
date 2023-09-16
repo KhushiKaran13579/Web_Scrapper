@@ -1,13 +1,13 @@
 # Web Scraping and File Download Flask Application
 
 This Flask application allows you to enter a URL, fetch its HTML content, parse it using BeautifulSoup, and then download the HTML content as a file. Additionally, it extracts specific information from the HTML, such as the page title, paragraphs, and links.
-## Images
+
 
 ## Layout
- ![Screenshot (22)](https://github.com/Sarvesh223/web_scrapper/assets/92908500/c5470907-e60f-460c-90a9-e2ef741cf88e)
+![Screenshot (22)](https://github.com/Sarvesh223/web_scrapper/assets/92908500/c5470907-e60f-460c-90a9-e2ef741cf88e)
 ## Scrape Data
- ![Screenshot (23)](https://github.com/Sarvesh223/web_scrapper/assets/92908500/c1b2fe3b-32ac-4faf-a6fa-92f67ac9220f)
- ![Screenshot (24)](https://github.com/Sarvesh223/web_scrapper/assets/92908500/1fe1933c-1fd4-4f3b-ae7e-3ab853615a4d)
+![Screenshot (23)](https://github.com/Sarvesh223/web_scrapper/assets/92908500/c1b2fe3b-32ac-4faf-a6fa-92f67ac9220f)
+![Screenshot (24)](https://github.com/Sarvesh223/web_scrapper/assets/92908500/1fe1933c-1fd4-4f3b-ae7e-3ab853615a4d)
 
 ## Prerequisites
 Before running the application, make sure you have the following prerequisites installed:
